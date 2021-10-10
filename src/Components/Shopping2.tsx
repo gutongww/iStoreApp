@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const getProducts = async (): Promise<CartItemType[]> =>
   await (await fetch('https://fakestoreapi.com/products')).json();
 
-  const Shopping = () => {
+  const Shopping2 = () => {
 
     const [sideBar, setSideBar] = useState(false);
     const classes = useStyles();
@@ -113,31 +113,7 @@ const getProducts = async (): Promise<CartItemType[]> =>
             removeFromCart={handleRemoveFromCart}
             />
 
-
-            
-<p>User Name: </p>
-            <TextField
-        placeholder="First Name:"
-        value={val}
-        onChange={setVal}
-        ref={inputRef}
-      />
-        <p>Password: </p>
-        <TextField
-        placeholder="Last Name:"
-        value={val}
-        onChange={setVal}
-        ref={inputRef}
-      />
-        <p>Ship Address: </p>
-        <TextField
-        placeholder="Ship Address:"
-        value={val}
-        onChange={setVal}
-        ref={inputRef}
-      />
-        <Button color="inherit">Register</Button>
-        <Button color="inherit" onClick = { () => alert('Please log in first') }>Check out</Button>
+        <Button color="inherit" onClick = { () => alert('Success') }>Check out</Button>
         </Drawer>
 
         
@@ -147,9 +123,7 @@ const getProducts = async (): Promise<CartItemType[]> =>
     </Badge>
     </StyledButton>
 
-    <div className={classes.root}>
-        <p>  </p>
-      </div>
+
     
     <Grid container spacing={5}>
         {data?.map(item => (
@@ -159,14 +133,8 @@ const getProducts = async (): Promise<CartItemType[]> =>
         ))}
       </Grid>
 
-      <div className={classes.root}>
-        <p>   ♥ </p>
-      </div>
-      <div className={classes.root}>
-        <p>   haha  </p>
-      </div>
     </Wrapper>
   );
 };
 
-export default Shopping;
+export default Shopping2;

@@ -4,13 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {QueryClient, QueryClientProvider} from 'react-query';
+import { ApolloProvider } from '@apollo/client';
+import graphQLClient from './GraphQLClient';
+import { BrowserRouter } from "react-router-dom";
 
 const client = new QueryClient();
+
+
 ReactDOM.render(
   <QueryClientProvider client = {client}>
+  <ApolloProvider client={graphQLClient}>
   <React.StrictMode>
+    <BrowserRouter>
     <App />
+    </BrowserRouter>
   </React.StrictMode>
+  </ApolloProvider>
   </QueryClientProvider>,
   document.getElementById('root')
 );

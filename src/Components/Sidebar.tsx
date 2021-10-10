@@ -30,7 +30,7 @@ export const Sidebar = () => {
   return (
     <div className={classes.list}>
       <List>
-        <ListItem button>
+        <ListItem button href="/" component={Link}>
           <ListItemIcon>
             <HomeIcon />
           </ListItemIcon>
@@ -45,7 +45,7 @@ export const Sidebar = () => {
       </List>
       <Divider />
       <List>
-        <ListItem button>
+        <ListItem button href="/login" component={Link}>
           <ListItemIcon>
             <AccountCircleIcon/>
           </ListItemIcon>
